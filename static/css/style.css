@@ -3,3 +3,11 @@ body{
     font-family: Optima;
     font-size: x-large;
 }
+.float{
+    float: left;
+    width: 250;
+}
+.center{
+    width: 750;
+    margin: auto;
+}
