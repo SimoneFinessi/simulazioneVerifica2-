@@ -1,20 +1,18 @@
 from flask import Flask,render_template
 import datetime
 app = Flask(__name__)
-def controlo():
-    ora=int(datetime.datetime.now().time().hour())
+def controllo():
+    adesso=int(datetime.datetime.now().time().hour)
     if adesso>=22:
-        buon=Blue
+        buon="Blue"
     elif adesso>=12:
-        buon=Yellow
+        buon="Yellow"
     elif adesso<12:
-        buon=aqua
-    
-    return ora
+        buon="aqua"
+    return buon
 @app.route('/', methods=['GET'])
 def tour():
-    controllo()
-    return render_template("tour4.html")
+    return render_template("tour6.html",sfondo=controllo())
 
 @app.route('/singolo', methods=['GET'])
 def singol():
